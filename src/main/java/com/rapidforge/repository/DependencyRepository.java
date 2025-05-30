@@ -29,6 +29,7 @@ public interface DependencyRepository extends JpaRepository<Dependency, Long> {
             Pageable pageable
     );
 
+    boolean existsByDependCode(String dependCode);
 }
 
 
