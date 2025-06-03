@@ -1,10 +1,12 @@
-package com.rapidforge.model;
+package com.rapidforge.projGenModel;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ProjectRequest {
     private String projectName;
     private String groupId;

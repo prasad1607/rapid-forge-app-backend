@@ -1,6 +1,6 @@
 package com.rapidforge.service.projectGen;
 
-import com.rapidforge.model.DirectoryNode;
+import com.rapidforge.projGenModel.DirectoryNode;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;

@@ -1,7 +1,7 @@
 package com.rapidforge.service.projectGen;
 
 import com.rapidforge.exception.ResourceNotFoundException;
-import com.rapidforge.model.*;
+import com.rapidforge.projGenModel.*;
 import com.rapidforge.repository.projectGen.BuildRepository;
 import com.rapidforge.repository.projectGen.FileTemplatePlaceholderRepository;
 import com.rapidforge.repository.projectGen.FrameworkProjectGenRepository;
@@ -46,7 +46,7 @@ public class ProjectGenerationService {
         Framework framework = frameworkProjectGenRepository.findByframeName(request.getFramework().getName())
                 .orElseThrow(() -> new ResourceNotFoundException("Framework not found: " + request.getFramework().getName()));
 
-        BuildTools buildTools = buildRepo.findByBuildName(request.getBuildTool().getName())
+        BuildTools buildTools = buildRepo.findByBuildToolsName(request.getBuildTool().getName())
                 .orElseThrow(() -> new ResourceNotFoundException("build not found: " + request.getBuildTool().getName()));
         DirectoryNode rootNode = directoryTreeBuilder.buildTree(framework,buildTools);
 

@@ -1,6 +1,6 @@
 package com.rapidforge.controller;
 
-import com.rapidforge.model.ProjectRequest;
+import com.rapidforge.projGenModel.ProjectRequest;
 import com.rapidforge.service.projectGen.ProjectGenerationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +29,7 @@ public class ProjectController {
 
 
 
-    @PostMapping("/generate")
+    @PostMapping("/generateProject")
     public ResponseEntity<FileSystemResource> generateProject(@RequestBody ProjectRequest request) throws Exception {
         File zipFile = projectGenerationService.generateProject(request);
         FileSystemResource resource = new FileSystemResource(zipFile);

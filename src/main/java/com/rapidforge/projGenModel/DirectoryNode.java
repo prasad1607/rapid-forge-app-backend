@@ -1,4 +1,4 @@
-package com.rapidforge.model;
+package com.rapidforge.projGenModel;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -20,7 +20,7 @@ public class DirectoryNode {
     private Framework framework;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "\"BUILD_TOOLS_CODE\"", referencedColumnName = "\"FRAME_CODE\"")
+    @JoinColumn(name = "\"BUILD_TOOLS_CODE\"", referencedColumnName = "\"BUILD_TOOLS_CODE\"")
     private BuildTools buildTools;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -1,4 +1,4 @@
-package com.rapidforge.model;
+package com.rapidforge.projGenModel;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

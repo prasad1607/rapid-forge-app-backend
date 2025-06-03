@@ -1,4 +1,4 @@
-package com.rapidforge.model;
+package com.rapidforge.projGenModel;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -6,22 +6,28 @@ import lombok.Data;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "\"FRAMEWORKS\"")
+@Table(name = "\"BUILD_TOOLS\"")
 @Data
-public class Framework {
+public class BuildTools {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "\"ID\"")
     private Long id;
 
-    @Column(name = "\"FRAME_CODE\"", unique = true)
-    private String frameCode;
+    @Column(name = "\"BUILD_TOOLS_CODE\"", unique = true)
+    private String buildToolsCode;
 
-    @Column(name = "\"FRAME_NAME\"")
-    private String frameName;
+    @Column(name = "\"BUILD_TOOLS_NAME\"")
+    private String buildToolsName;
+
+    @Column(name = "\"BUILD_TOOLS_TYPE\"")
+    private String buildToolsType;
 
     @Column(name = "\"LANG_CODE\"")
     private String langCode;
+
+    @Column(name = "\"FRAME_CODE\"")
+    private String frameCode;
 
     @Column(name = "\"IS_DEFAULT_FRAME\"")
     private Boolean isDefaultFrame = true;

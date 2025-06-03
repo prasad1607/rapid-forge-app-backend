@@ -1,4 +1,4 @@
-package com.rapidforge.model.request;
+package com.rapidforge.projGenModel.request;
 
 import lombok.Data;
 

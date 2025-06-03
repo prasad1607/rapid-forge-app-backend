@@ -1,6 +1,6 @@
 package com.rapidforge.repository.projectGen;
 
-import com.rapidforge.model.Framework;
+import com.rapidforge.projGenModel.Framework;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
